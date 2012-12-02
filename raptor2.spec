@@ -1,7 +1,7 @@
 Summary:	Raptor RDF Parser Toolkit
 Name:		raptor2
 Version:	2.0.8
-Release:	2
+Release:	3
 License:	LGPL v2.1+ or GPL v2+ or Apache v2.0+
 Group:		Libraries
 Source0:	http://download.librdf.org/source/%{name}-%{version}.tar.gz
@@ -87,7 +87,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libraptor2.so
 %{_libdir}/libraptor2.la
-%{_includedir}/raptor2
+%dir %{_includedir}/raptor2
+%{_includedir}/raptor2/raptor.h
+%{_includedir}/raptor2/raptor2.h
 %{_pkgconfigdir}/raptor2.pc
 %{_mandir}/man3/libraptor2.3*
 
