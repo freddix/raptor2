@@ -1,11 +1,11 @@
 Summary:	Raptor RDF Parser Toolkit
 Name:		raptor2
-Version:	2.0.10
+Version:	2.0.11
 Release:	1
 License:	LGPL v2.1+ or GPL v2+ or Apache v2.0+
 Group:		Libraries
 Source0:	http://download.librdf.org/source/%{name}-%{version}.tar.gz
-# Source0-md5:	d9b0314eb835551adb48af037dcfd46e
+# Source0-md5:	e747fbf6b2b3189ae3daa3f0b6899432
 URL:		http://librdf.org/raptor/
 BuildRequires:	autoconf
 BuildRequires:	automake
