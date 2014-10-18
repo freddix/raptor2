@@ -1,11 +1,11 @@
 Summary:	Raptor RDF Parser Toolkit
 Name:		raptor2
-Version:	2.0.13
+Version:	2.0.14
 Release:	1
 License:	LGPL v2.1+ or GPL v2+ or Apache v2.0+
 Group:		Libraries
 Source0:	http://download.librdf.org/source/%{name}-%{version}.tar.gz
-# Source0-md5:	f380566229d6264590315b0a5341b689
+# Source0-md5:	d3e0b43866197a5367b781b25510f728
 URL:		http://librdf.org/raptor/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -71,6 +71,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/*.la
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -86,7 +88,6 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libraptor2.so
-%{_libdir}/libraptor2.la
 %dir %{_includedir}/raptor2
 %{_includedir}/raptor2/raptor.h
 %{_includedir}/raptor2/raptor2.h
